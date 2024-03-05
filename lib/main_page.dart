@@ -10,6 +10,7 @@ import 'package:google_solution_challange/settings_page.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:google_solution_challange/styled_text.dart';
+import 'package:google_solution_challange/user_profile_page.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:osm_nominatim/osm_nominatim.dart';
@@ -504,6 +505,27 @@ class _MapPageState extends State<MapPage> {
       fetchLocations();
     }
     return Scaffold(
+      appBar: AppBar(
+        bottomOpacity: 100,
+        automaticallyImplyLeading: false,
+        toolbarHeight: 60,
+        shadowColor: const Color.fromARGB(147, 0, 0, 0),
+        elevation: 3,
+        backgroundColor: Colors.white,
+        title: SvgPicture.asset('assets/appbar/cover.svg',width: 100,color: Color.fromARGB(190, 0, 0, 0)),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => UserProfile()), // Replace with your target screen widget
+            );
+            },
+          ),
+        ],
+      ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

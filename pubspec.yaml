@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.5
+  flutter_svg: ^2.0.10+1
   flutter_osm_plugin: ^0.60.4
   google_sign_in: ^6.2.1
 
@@ -51,6 +51,7 @@ dependencies:
   geolocator: ^10.1.0
   shared_preferences: ^2.2.2
   easy_localization: ^3.0.4
+  
 
 
 flutter_icons:
@@ -98,6 +99,7 @@ flutter:
     - assets/main/location.svg
     - assets/Colored_Markers/
     - assets/
+    - assets/appbar/
     - assets/onboard/
     - assets/settings_page/
     - assets/translations/
